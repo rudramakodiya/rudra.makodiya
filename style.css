@@ -1,0 +1,114 @@
+:root {
+  --primary1: #1d2671;
+  --primary2: #c33764;
+  --glass: rgba(255, 255, 255, 0.18);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  color: white;
+  background: linear-gradient(135deg, var(--primary1), var(--primary2));
+  background-size: 300% 300%;
+  animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  opacity: 0.9;
+}
+
+.email {
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
+
+/* Layout */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Cards */
+.card {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card ul {
+  padding-left: 18px;
+}
+
+/* Tags */
+.tags {
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.25);
+  font-size: 0.8rem;
+  margin-right: 6px;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: white;
+  color: #c33764;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px 10px;
+  opacity: 0.85;
+}
